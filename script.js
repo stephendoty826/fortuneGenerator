@@ -1,5 +1,5 @@
 // This is the input for the button
-
+console.log("hello world")
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
