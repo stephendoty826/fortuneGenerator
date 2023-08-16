@@ -1,11 +1,10 @@
 // This is the input for the button
+
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
 
-const keyObj = require("./keys.json")
-
-console.log(keyObj)
+import { keyObj } from './keys.js';
 
 // Program runs when button is clicked
 document.getElementById("btn").addEventListener("click", (e) => {
@@ -67,7 +66,7 @@ function fetchOpenAI(temp, prompt) {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      Authorization: `Bearer ${openai}`,
+      Authorization: `Bearer ${keyObj.openai}`,
     },
   })
     .then((response) => {
@@ -77,8 +76,8 @@ function fetchOpenAI(temp, prompt) {
       }
       throw new Error("Request failed.");
     })
-    .then((json) => {
-      console.log(json);
+    .then((response) => {
+      console.log(response);
 
 // Populate the fortune in the HTML + reveal card
       document.getElementById("fortune").textContent = json.choices[0].text;
