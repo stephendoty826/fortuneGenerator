@@ -6,6 +6,8 @@ const input = document.getElementById("search");
 
 import { keyObj } from './keys.js';
 
+console.log(keyObj);
+
 // Program runs when button is clicked
 document.getElementById("btn").addEventListener("click", (e) => {
   e.preventDefault();
