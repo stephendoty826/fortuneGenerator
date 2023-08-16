@@ -4,7 +4,7 @@ const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
 
-import { keyObj } from './keys.js';
+// import { keyObj } from './keys.js';
 
 console.log(keyObj);
 
