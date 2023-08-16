@@ -3,6 +3,10 @@ const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
 
+const keyObj = require("./keys.json")
+
+console.log(keyObj)
+
 // Program runs when button is clicked
 document.getElementById("btn").addEventListener("click", (e) => {
   e.preventDefault();
@@ -20,7 +24,7 @@ input.addEventListener("keypress", (e) => {
 // Weather API
 function fetchWeatherData() {
   fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${weatherapi}`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${keyObj.weatherapi}`
   )
 
   // This code is making a request to a weather API and retrieving the temperature data from the response
