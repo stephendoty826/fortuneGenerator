@@ -1,10 +1,9 @@
 // This is the input for the button
-console.log("hello world")
+import { keyObj } from './etc/secrets/keys.js';
+
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
-
-// import { keyObj } from './keys.js';
 
 console.log(keyObj);
 
