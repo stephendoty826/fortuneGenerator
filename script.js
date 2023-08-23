@@ -1,6 +1,6 @@
 // This is the input for the button
 
-fetch('/etc/secrets/keys', {
+fetch('https://fortunegeneratorsd.onrender.com/etc/secrets/keys', {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
