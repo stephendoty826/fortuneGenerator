@@ -1,13 +1,13 @@
 // This is the input for the button
 
-fetch('https://fortunegeneratorsd.onrender.com/etc/secrets/keys', {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json',
-    },
-})
-  .then(response => response.json())
-  .then(response => console.log(JSON.stringify(response)))
+// fetch('/etc/secrets/keys', {
+//     method: 'GET',
+//     headers: {
+//         'Accept': 'application/json',
+//     },
+// })
+//   .then(response => response.json())
+//   .then(response => console.log(JSON.stringify(response)))
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
@@ -31,7 +31,7 @@ input.addEventListener("keypress", (e) => {
 // Weather API
 function fetchWeatherData() {
   fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${keys.weatherapi}`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${weatherapi}`
   )
 
   // This code is making a request to a weather API and retrieving the temperature data from the response
@@ -74,7 +74,7 @@ function fetchOpenAI(temp, prompt) {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      Authorization: `Bearer ${keys.openai}`,
+      Authorization: `Bearer ${openai}`,
     },
   })
     .then((response) => {
