@@ -1,13 +1,13 @@
 // This is the input for the button
 
-// fetch('/etc/secrets/keys2', {
-//     method: 'GET',
-//     headers: {
-//         'Accept': 'application/json',
-//     },
-// })
-//   .then(response => response.json())
-//   .then(response => console.log(JSON.stringify(response)))
+fetch('/etc/secrets/keys2', {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+    },
+})
+  .then(response => response.json())
+  .then(response => console.log(JSON.stringify(response)))
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
