@@ -6,6 +6,7 @@ console.log(keys);
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
+const button = document.getElementById("btn");
 
 // Program runs when button is clicked
 document.getElementById("btn").addEventListener("click", (e) => {
@@ -90,6 +91,12 @@ function fetchOpenAI(temp, prompt) {
       console.error(error);
     });
 }
+
+button.addEventListener("click", () => {
+  load();
+  reveal();
+})
+
 // function to hide and reveal the fortune
 function reveal() {
   const f = document.getElementById("fortune");
