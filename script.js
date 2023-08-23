@@ -1,7 +1,7 @@
 // This is the input for the button
 
-// import keys from './keys.json' assert { type: 'json' };
-// console.log(keys);
+import keys from '/etc/secrets/keys.json' assert { type: 'json' };
+console.log(keys);
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
