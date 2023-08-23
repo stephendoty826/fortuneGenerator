@@ -1,11 +1,11 @@
 // This is the input for the button
-import { keyObj } from '/etc/secrets/keys.js';
+
+import keys from './keys.json' assert { type: 'json' };
+console.log(keys);
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
 const input = document.getElementById("search");
-
-console.log(keyObj);
 
 // Program runs when button is clicked
 document.getElementById("btn").addEventListener("click", (e) => {
@@ -24,7 +24,7 @@ input.addEventListener("keypress", (e) => {
 // Weather API
 function fetchWeatherData() {
   fetch(
-    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${keyObj.weatherapi}`
+    `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search.value}?key=${keys.weatherapi}`
   )
 
   // This code is making a request to a weather API and retrieving the temperature data from the response
@@ -67,7 +67,7 @@ function fetchOpenAI(temp, prompt) {
     method: "POST",
     headers: {
       "content-type": "application/json",
-      Authorization: `Bearer ${keyObj.openai}`,
+      Authorization: `Bearer ${keys.openai}`,
     },
   })
     .then((response) => {
