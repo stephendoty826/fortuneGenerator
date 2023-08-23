@@ -1,7 +1,10 @@
 // This is the input for the button
 
-import keys from '/etc/secrets/keys.json' assert { type: 'json' };
-console.log(keys);
+fetch("/etc/secrets/keys.json")
+.then(response => response.json())
+.then(response => {
+  console.log(response)
+})
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
