@@ -1,10 +1,13 @@
 // This is the input for the button
 
-fetch("/etc/secrets/keys.json")
-.then(response => response.json())
-.then(response => {
-  console.log(response)
+fetch('./etc/secrets/keys.json', {
+    method: 'GET',
+    headers: {
+        'Accept': 'application/json',
+    },
 })
+  .then(response => response.json())
+  .then(response => console.log(JSON.stringify(response)))
 
 const search = document.getElementById("search");
 const fortune = document.getElementById("fortune");
