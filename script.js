@@ -1,6 +1,6 @@
 // This is the input for the button
 
-fetch('./etc/secrets/keys.json', {
+fetch('./test.json', {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
